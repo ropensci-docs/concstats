@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "16282caeb33f78463a43a028079b00b70018ba84",
+    "author": "schneiderpy <schneiderconsultingpy@gmail.com>",
+    "time": "2023-03-31 22:17:46",
+    "files": 5,
+    "merge": false,
+    "message": "reverted version increase\n"
+  },
+  "repo": "https://github.com/ropensci/concstats",
+  "pkg": "concstats"
+}
