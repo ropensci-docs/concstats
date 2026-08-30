@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "e105b61be923022031526a4b2af4a96a40d7094c",
+    "author": "Andreas Schneider <schneiderconsultingpy@gmail.com>",
+    "time": "2025-07-18T15:23:52Z",
+    "files": 3,
+    "merge": false,
+    "message": "updated function\n"
+  },
+  "repo": "https://github.com/ropensci/concstats",
+  "pkg": "concstats",
+  "time": "2026-08-30T07:39:53Z"
+}
