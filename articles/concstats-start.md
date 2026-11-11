@@ -1,0 +1,85 @@
+# Getting started
+
+###  What is concstats?
+
+concstats is a small package that helps you to **calculate the
+structure, concentration or diversity measures of a given market.**  
+You can reach that goal in different ways:  
+a) calculating an individual measure, e.g. the Herfindahl Hirschman
+Index (HHI) or its dual.  
+b) calculating a group of measures, e.g. structural measures, or  
+c) a set of pre-selected measures in a one-step procedure.
+
+###  How can you install it?
+
+You can install `concstats` directly from CRAN
+
+``` r
+
+install.packages("concstats") # Market Structure, Concentration, and Inequality
+                              # Measures
+library(concstats)
+```
+
+You can install the development versions from
+
+*r-universe*  
+install.packages(“concstats”, repos =
+“<https://ropensci.r-universe.dev>”)
+
+*github* (requires `remotes` or `devtools`)  
+remotes::install_github(“ropensci/concstats”
+
+##  Why did I build it?
+
+Measures of concentration and competition are important and give a first
+insight of a given market structure in a particular market.  
+**They are important to determine public policies and strategic
+corporate decisions**. However, in research and in practice the most
+commonly used measure is the Herfindahl Hirschman Index. The `concstats`
+package offers a **set of alternative measures**.
+
+`concstats` allows you to **calculate quickly a particular measure or a
+group of measures to give you a better overview of a given market
+situation and therefore reducing uncertainty.** **It can be used by
+practitioners and academics alike.**
+
+###  How can it be used?
+
+`concstats` should be used by practitioners and academics **who are
+concerned about structure, concentration, diversity or inequality** in
+general or on a regular basis. **A single standard measure like the
+Herfindahl Hirschman Index (HHI) may lead to erroneous conclusions.**
+The `concstats` package offers a **straightforward way to calculate
+standard and alternative measures** given a data set of market
+participants and their participation (in relative values) in a
+particular market at a given point of time or over time. concstats
+provides currently the following basic functions:
+
+- **[`concstats_concstats()`](https://docs.ropensci.org/concstats/reference/concstats_concstats.md)**
+  calculates eight pre-selected measures in a one-step procedure to
+  provide a first insight of the market. The resulting data frame
+  contains eight measures, which are: number of firms with market share,
+  numbers equivalent, the cumulative share of the top (top 3 and top 5)
+  firm(s) in percentage, the hhi index, the entropy index, and the palma
+  ratio.
+- **[`concstats_mstruct()`](https://docs.ropensci.org/concstats/reference/concstats_mstruct.md)**
+  is a wrapper for the following measures: **firm**, **nrs_eq** (Numbers
+  equivalent), **top**, **top 3** and **top 5** market share, and
+  **all** calculates all measures as a group. Each of the measures
+  within a group can be accessed directly using the prefix
+  **concstats\_**, e.g. **concstats_firm**. In practice, firm ranking
+  might be of interest, and the user might prefer the
+  **concstats_top_df** functions. In general, the user should provide
+  individual markets shares, however, the helper function
+  **concstats_shares** can be used.
+- **[`concstats_comp()`](https://docs.ropensci.org/concstats/reference/concstats_comp.md)**
+  is a group wrapper for the following concentration measures: **hhi**,
+  the **dual of the hhi**, the **min. of the hhi**, the **dominance
+  index**, the **stenbacka index**, and finally **all** which calculates
+  all measures as a group.
+- **[`concstats_inequ()`](https://docs.ropensci.org/concstats/reference/concstats_inequ.md)**
+  is a wrapper for inequality and diversity measures and contains:
+  **entropy**, **gini coefficient**, **simpson index**, the **palma
+  ratio** and the alternative **grs** measure, **all** calculates the
+  group measures.
